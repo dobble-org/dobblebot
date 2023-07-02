@@ -1,5 +1,15 @@
+from pathlib import Path
+from tap import Tap
+
 from dobblebot.services.yolov5 import YoloService
 
 
+class SampleCLI(Tap):
+    weights: Path
+    image: Path
+
 if __name__ == '__main__':
-    service = YoloService('D:\Development\dobble-org\dobblebot\data\dobblenet_yolov5m.pt')
+    ARGUMENTS = SampleCLI(underscores_to_dashes=True).parse_args()
+    SERVICE = YoloService(ARGUMENTS.weights)
+    SERVICE.detect(ARGUMENTS.image)
+

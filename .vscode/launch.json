@@ -9,10 +9,14 @@
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/cli/sample.py",
+            "args": [
+                "--weights", "data/dobblenet_yolov5m.pt",
+                "--image", "data/test.0.jpg"
+            ],
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {
-                "PYTHONPATH": "${PYTHONPATH}:${workspaceFolder}"
+                "PYTHONPATH": "${workspaceFolder}"
             }
         }
     ]
