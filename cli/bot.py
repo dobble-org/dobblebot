@@ -1,15 +1,19 @@
 import os
-
-from telegram import ForceReply, Update
-from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
+from pathlib  import Path
+from telegram import Update
+from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
 
 from dobblebot.bot import DobbleBot, States
 from dobblebot.services.yolov5 import YoloService
+import urllib.request
 
 
 def main(token: str):
-    yolo_weights = os.environ['YOLO_WEIGHTS']
+    yolo_weights = Path(os.environ['YOLO_WEIGHTS'])
+    if not yolo_weights.is_file():
+        yolo_weights_url = os.environ['YOLO_WEIGHTS_URL']
+        urllib.request.urlretrieve(yolo_weights_url, yolo_weights)
     detection_service = YoloService(yolo_weights)
     bot = DobbleBot(detection_service)
     application = Application.builder().token(token).build()
