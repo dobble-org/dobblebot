@@ -18,6 +18,19 @@
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
             }
+        },
+        {
+            "name": "Telegram Bot",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli/bot.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "YOLO_WEIGHTS": "data/dobblenet_yolov5m.pt",
+                "TELEGRAM_BOT_TOKEN": "6113466750:AAHmHalgMaQdxNNacr0i73SVP_-tJO6sVkE"
+            }
         }
     ]
 }

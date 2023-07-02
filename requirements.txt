@@ -1,3 +1,8 @@
 -r yolov5/requirements.txt
 
 typed-argument-parser
+python-telegram-bot
+
+numpy
+opencv-python
+image
