@@ -11,9 +11,9 @@
             "program": "${workspaceFolder}/cli/sample.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            // "env": {
-            //     "PYTHONPATH": "${PYTHONPATH}:${workspaceFolder}"
-            // }
+            "env": {
+                "PYTHONPATH": "${PYTHONPATH}:${workspaceFolder}"
+            }
         }
     ]
 }

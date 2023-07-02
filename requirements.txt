@@ -1,1 +1,1 @@
-torch
+-r yolov5/requirements.txt
