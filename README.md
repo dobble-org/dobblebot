@@ -6,6 +6,7 @@ A telegram bot to help you detect Dobble icons on cards.
    ```bash
    git clone https://github.com/dobble-org/dobblebot.git
    cd dobblebot
+   git submodule update --init
    ```
 1. Create a virtual environment
    ```bash
