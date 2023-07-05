@@ -1,7 +1,7 @@
 # Dobblebot
 A telegram bot to help you detect Dobble icons on cards.
 
-# How to start the bot
+# How to start the bot on ubuntu 
 1. Clone the repository
    ```bash
    git clone https://github.com/dobble-org/dobblebot.git
@@ -18,6 +18,10 @@ A telegram bot to help you detect Dobble icons on cards.
    ```bash
    python -m pip install -r requirements.txt
    ```
+1. Install system dependencies
+   ```bash
+   sudo apt install -y ffmpeg libsm6 libxext6 
+   ```
 1. Set a Telegram bot token to environment 
    ```bash
    export TELEGRAM_BOT_TOKEN=...
@@ -28,5 +32,5 @@ A telegram bot to help you detect Dobble icons on cards.
    ```
 1. Run the bot 
    ```bash
-   python ${workspaceFolder}/cli/bot.py
+   python \cli/bot.py
    ```
