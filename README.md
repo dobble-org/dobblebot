@@ -1,6 +1,8 @@
 # Dobblebot
 A telegram bot to help you detect Dobble icons on cards.
 
+![](./imgs/example.gif)
+
 # How to start the bot on ubuntu 
 1. Clone the repository
    ```bash
